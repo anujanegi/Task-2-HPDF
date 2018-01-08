@@ -33,3 +33,12 @@ def authors():
                 c+=1
         text=text+authorNames[i]['name']+" "+str(c)+"<br>"
     return text
+
+#
+# Task 3
+#
+@app.route('/setcookie')
+def setcookie():
+    response = make_response(redirect('/'))
+    response.set_cookie('anuja', value='19')
+    return response
