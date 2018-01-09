@@ -1,7 +1,8 @@
 from src import app
-from flask import make_response, Response, redirect, request, abort, render_template
+from flask import make_response, Response, redirect, request, abort, render_template, url_for
 import requests
 import json
+import sys
 
 #
 # Task 1
@@ -66,3 +67,16 @@ def robots_txt():
 @app.route('/html/<name>')
 def html(name=None):
     return render_template('hello.html', name=name)
+
+#
+# Task 7
+#
+@app.route('/input')
+def input():
+    return render_template('data.html')
+
+@app.route('/input', methods=['POST'])
+def input_post():
+    data = request.form['data']
+    print(data, file=sys.stdout)        # logging to console
+    return redirect(url_for('input'))   # redirecting to /input
