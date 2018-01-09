@@ -43,3 +43,11 @@ def setcookie():
     response = make_response(redirect('/'))
     response.set_cookie('anuja', value='19')
     return response
+
+#
+# Task 4
+#
+@app.route('/getcookie')
+def getcookie():
+    age = request.cookies.get('anuja')
+    return age
