@@ -1,5 +1,5 @@
 from src import app
-from flask import make_response, Response, redirect, request, abort
+from flask import make_response, Response, redirect, request, abort, render_template
 import requests
 import json
 
@@ -58,3 +58,11 @@ def getcookie():
 @app.route('/robots.txt')
 def robots_txt():
     abort(404)
+
+#
+# Task 6
+#
+@app.route('/html')
+@app.route('/html/<name>')
+def html(name=None):
+    return render_template('hello.html', name=name)
