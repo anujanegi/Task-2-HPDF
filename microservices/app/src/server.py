@@ -51,3 +51,10 @@ def setcookie():
 def getcookie():
     age = request.cookies.get('anuja')
     return age
+
+#
+# Task 5
+#
+@app.route('/robots.txt')
+def robots_txt():
+    abort(404)
