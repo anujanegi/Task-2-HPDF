@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# hello-python-flask
+# Task-2-HPDF
 
-Boilerplate Hasura project with [Flask](http://flask.pocoo.org/) microservice.
-
+Repo for Hasura's Product Development Fellowship, individual task 2.
+Used Hasura's Boilerplate project with Flask microservice. Boilerplate and its usage details as follows:
 
 ## Getting started
 
