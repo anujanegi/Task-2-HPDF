@@ -1,5 +1,5 @@
 from src import app
-from flask import make_response
+from flask import make_response, Response
 import requests
 import json
 
