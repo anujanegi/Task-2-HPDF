@@ -78,5 +78,6 @@ def input():
 @app.route('/input', methods=['POST'])
 def input_post():
     data = request.form['data']
-    print(data, file=sys.stdout)        # logging to console
-    return redirect(url_for('input'))   # redirecting to /input
+    #print(data, file=sys.stdout)        # logging to console
+    #return redirect(url_for('input'))   # redirecting to /input
+    return data
